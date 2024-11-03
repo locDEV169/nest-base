@@ -5,7 +5,7 @@ import { Prisma, User } from '@prisma/client';
 
 @Injectable()
 export class UserRepositoryOrm implements UserRepository {
-  constructor(private readonly userRepository: PrismaService) {}
+  constructor(private readonly userRepository: PrismaService) { }
 
   async getAllUsers(): Promise<User[]> {
     const users = await this.userRepository.user.findMany();

@@ -13,7 +13,7 @@ export class UserController {
     private readonly getUserUsecaseProxy: UseCaseProxy<GetAllUserUseCases>,
     @Inject(UsecaseProxyModule.CREATE_USER_USE_CASE)
     private readonly createUserUsecaseProxy: UseCaseProxy<CreateUserUseCases>,
-  ) {}
+  ) { }
 
   @Get('')
   async getAllUsers() {
