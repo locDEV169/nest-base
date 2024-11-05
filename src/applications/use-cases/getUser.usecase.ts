@@ -2,10 +2,10 @@
 import { UserM } from 'src/domains/model/user';
 import { UserRepository } from 'src/domains/repositories/user.repository';
 
-export class GetAllUserUseCases {
+export class GetUserUseCases {
   constructor(private usersRepository: UserRepository) {}
 
-  async execute(): Promise<UserM[]> {
-    return await this.usersRepository.getAllUsers();
+  async executeGetOneUser(id: number | string): Promise<UserM> {
+    return await this.usersRepository.getUsers(id);
   }
 }
